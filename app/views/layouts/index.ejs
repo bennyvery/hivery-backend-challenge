@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Paranuara</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+  </head>
+  <body class="container">
+    <header>
+      <% include ../components/navbar %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <h1>Welcome to Paranuara !</h1>
+            <p>What can we do for you today ?</p>
+            <% include ../components/planet %>
+        </div>
+        <div class="jumbotron">
+          <h3>Total Population Alive: <%= population %></h3>
+          <h3>Gender Balance:  <%= males %>% M -  <%= females %>% F</h3>
+          <h3>Average Age: <%= age %> yo</h3>
+          <h3>Number of Companies: <%= companies %></h3>
+          <h3>Biggest Company: <%= biggestCompany %></h3>
+        </div>
+    </main>
+    <footer>
+      <% include ../components/footer %>
+    </footer>
+  </body>
+</html>

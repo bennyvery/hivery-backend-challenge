@@ -1,0 +1,29 @@
+.list-companies {
+  height: 370px;
+  overflow-y: scroll;
+}
+.list-employees {
+  max-height: 320px;
+  overflow-y: scroll;
+}
+
+.result-container .jumbotron{
+  height: 520px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.list-employees table {
+  text-transform: capitalize;
+}
+
+form {
+  margin-bottom: 20px;
+}
+.error-message{
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
