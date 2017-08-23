@@ -1,6 +1,8 @@
 # Paranuara Challenge
 
 ## Architecture
+
+```
 .
 ├── app
 │   ├── controllers
@@ -47,6 +49,6 @@
     ├── controller.js
     ├── models.js
     └── utilities.js
-
+```
 
 ## Features
