@@ -12,6 +12,12 @@ make install
 make run
 ```
 
+## Tests
+
+```
+make test
+```
+
 ## Architecture
 
 ```
