@@ -1,5 +1,17 @@
 # Paranuara Challenge
 
+## Setup
+
+```
+make install
+```
+
+## Run
+
+```
+make run
+```
+
 ## Architecture
 
 ```

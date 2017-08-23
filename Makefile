@@ -8,6 +8,7 @@ default:
 	echo "Local examples:"
 	echo "	make install	#Will install js libraries and MongoDB from scratch."
 	echo "	make start-mongo	#Will start MongoDB."
+	echo "	make run	#Will start the application."
 	echo "\n"
 
 install: mongo-install install-npm install-webserver
@@ -33,3 +34,6 @@ install-webserver:
 
 start-mongo:
 	test -S /tmp/mongodb-27017.sock || sudo service mongod start
+
+run:
+	node app.js
