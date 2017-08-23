@@ -1,18 +1,18 @@
 const peopleModel = require("../models/people.js");
 const foodModel = require("../models/food.js");
-const { getAllPeople, getOnePerson } = peopleModel;
+const { getExampleOfPeople, getOnePerson } = peopleModel;
 const { getFruitFromFood, getVegetablesFromFood } = foodModel;
 
 const dietController = {
   listPeople: async function() {
-    const people = await getAllPeople();
+    const people = await getExampleOfPeople();
     return { people: people };
   },
 
   listDiet: async function(req) {
     const personName = req.query.name;
     const [people, person] = await Promise.all([
-      getAllPeople(),
+      getExampleOfPeople(),
       getOnePerson(personName)
     ]);
     if (person === null) return { people: people, error: "Unknown Request" };

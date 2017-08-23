@@ -6,11 +6,11 @@ export APP_HOST='127.0.0.1'
 default:
 	echo "\n"
 	echo "Local examples:"
-	echo "	make install	#Will install python libraries and MongoDB from scratch."
+	echo "	make install	#Will install js libraries and MongoDB from scratch."
 	echo "	make start-mongo	#Will start MongoDB."
 	echo "\n"
 
-install: mongo-install install-npm
+install: mongo-install install-npm install-webserver
 
 mongo-install:
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
@@ -24,6 +24,12 @@ mongo-install:
 
 install-npm:
 	sudo apt-get -y install npm nodejs-legacy
+	sudo apt-get install n
+	sudo n latest
+	npm install
+
+install-webserver:
+	sudo apt-get install nginx
 
 start-mongo:
 	test -S /tmp/mongodb-27017.sock || sudo service mongod start

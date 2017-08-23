@@ -1,10 +1,10 @@
 const utilities = require("../models/utilities.js");
 const peopleModel = require("../models/people.js");
-const { getAllPeople, getOnePerson, getFriendsAliveAndBrown } = peopleModel;
+const { getExampleOfPeople, getOnePerson, getFriendsAliveAndBrown } = peopleModel;
 
 const friendsController = {
   listPeople: async function() {
-    const people = await getAllPeople();
+    const people = await getExampleOfPeople();
     return { people: people, result: null };
   },
 
@@ -12,7 +12,7 @@ const friendsController = {
     const firstName = req.query.first;
     const secondName = req.query.second;
     const [people, firstPerson, secondPerson] = await Promise.all([
-      getAllPeople(),
+      getExampleOfPeople(),
       getOnePerson(firstName),
       getOnePerson(secondName)
     ]);

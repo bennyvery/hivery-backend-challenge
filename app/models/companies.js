@@ -1,8 +1,8 @@
 const db = require("../models/db.js");
 
 const companiesModel = {
-  getAllCompanies: function() {
-    return db.get().collection("companies").find().toArray();
+  getExemplesOfCompanies: function() {
+    return db.get().collection("companies").find().limit(50).toArray();
   },
   getOneCompany: function(name) {
     return db.get().collection("companies").findOne({ company: name });

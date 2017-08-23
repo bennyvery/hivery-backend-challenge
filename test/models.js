@@ -3,9 +3,9 @@ const assert = require("assert");
 const companiesModel = require("../app/models/companies.js");
 
 describe("models", function() {
-  describe("#getAllCompanies", function() {
+  describe("#getExemplesOfCompanies", function() {
     it("should return all the companies", function() {
-      companiesModel.getAllCompanies().then(data => {
+      companiesModel.getExemplesOfCompanies().then(data => {
         assert.equal(100, data.length);
       });
     });

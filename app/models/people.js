@@ -1,8 +1,8 @@
 const db = require("../models/db.js");
 
 const peopleModel = {
-  getAllPeople: function() {
-    return db.get().collection("people").find().toArray();
+  getExampleOfPeople: function() {
+    return db.get().collection("people").find().limit(50).toArray();
   },
   getOnePerson: function(name) {
     return db.get().collection("people").findOne({ name: name });
