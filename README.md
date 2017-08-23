@@ -1,5 +1,7 @@
 # Paranuara Challenge
 
+Stack : NodeJS, MongoDB
+
 ## Setup
 
 ```
